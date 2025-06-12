@@ -81,6 +81,26 @@ Use VS Code’s global rename or [rename package](https://pub.dev/packages/renam
 
 ## 🔥 Firebase Configuration
 
+🔹 Option 1: FlutterFire CLI (Recommended)
+```bash
+dart pub global activate flutterfire_cli
+flutterfire login
+flutterfire configure
+```
+
+This generates firebase_options.dart.
+
+
+Edit `boostrap.dart`:
+
+```dart
+Future<void> bootstrap(FutureOr<Widget> Function() builder) async  { 
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+ }
+```
+
+
+🔹 Option 2: Manual Setup
 > Follow these steps to connect your project to Firebase:
 
 ### ✅ Step 1: Set Up Firebase Project

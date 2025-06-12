@@ -60,7 +60,7 @@ A reusable and scalable Flutter boilerplate using **GetX** for state management 
 ### 1. Clone This Boilerplate
 
 ```bash
-git clone https://github.com/your-org/flutter_boilerplate.git new_project
+git clone https://github.com/Rumanali786/flutter_boilerplate.git new_project
 cd new_project
 rm -rf .git
 git init

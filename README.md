@@ -156,4 +156,9 @@ Feel free to fork, improve, or suggest changes. This template is meant to evolve
 **Ruman ali**  
 📧 jutts1055@gmail.com.com  
 
+
+## Sdk
+dart: ">=3.6.0 <4.0.0"
+flutter: ">=3.27.0"
+
 [//]: # (🌐 [yourwebsite.com]&#40;https://yourwebsite.com&#41;)

@@ -149,7 +149,7 @@ Edit `boostrap.dart`:
 
 ```dart
 Future<void> bootstrap(FutureOr<Widget> Function() builder) async  { 
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Firebase.initializeApp();
  }
 ```
 

@@ -155,6 +155,16 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async  {
 
 ---
 
+
+### ✅ Step 6: Update AppStrings File
+
+
+Edit `/lib/utils/constants/app_strings`:
+Add `Privacy Policy`, `Terms & Condition`, `Android Package Name`, `Ios Bundle Id` of your project.
+
+
+---
+
 ## 🧪 Ready to Build
 
 Use this command to run the app:

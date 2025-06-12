@@ -158,7 +158,9 @@ Feel free to fork, improve, or suggest changes. This template is meant to evolve
 
 
 ## Sdk
+```bash
 dart: ">=3.6.0 <4.0.0"
 flutter: ">=3.27.0"
+```
 
 [//]: # (🌐 [yourwebsite.com]&#40;https://yourwebsite.com&#41;)

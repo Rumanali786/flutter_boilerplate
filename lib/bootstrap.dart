@@ -21,7 +21,7 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-  await RemoteConfigService().initConfig();
+  // await RemoteConfigService().initConfig();
   await HiveCacheClient.initializeCache();
   await LocalStorageDb.init();
   PaintingBinding.instance.imageCache.maximumSizeBytes = 1000 << 20;

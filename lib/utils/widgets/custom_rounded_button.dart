@@ -5,7 +5,6 @@ import 'package:flutter_boilerplate/utils/extensions/text_theme_extensions.dart'
 
 import '../constants/colors.dart';
 import '../constants/device_util.dart';
-import '../generated_assets/assets.dart';
 
 class CustomRoundedButton extends StatefulWidget {
   final String text;
@@ -44,9 +43,7 @@ class _CustomRoundedButtonState extends State<CustomRoundedButton> {
           decoration: ShapeDecoration(
               color: widget.bgColor ?? AppColors.primaryColor,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-              image: widget.showBgImage == null || widget.showBgImage == true
-                  ? DecorationImage(image: AssetImage(Assets.imagesButtonBg), fit: BoxFit.cover)
-                  : null),
+           ),
           child: Center(
             child: Text(
               widget.text,

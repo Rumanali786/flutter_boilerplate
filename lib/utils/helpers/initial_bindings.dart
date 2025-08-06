@@ -25,6 +25,7 @@ class StoreBinding implements Bindings {
       ..lazyPut<FeedbackController>(FeedbackController.new)
       ..lazyPut<InterstitialController>(InterstitialController.new)
       ..lazyPut<RewardedAdController>(RewardedAdController.new)
+      ..lazyPut<SubscriptionController>(SubscriptionController.new)
       ..lazyPut<SplashController>(SplashController.new);
   }
 }

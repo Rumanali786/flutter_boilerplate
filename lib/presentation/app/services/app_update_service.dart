@@ -19,7 +19,7 @@ class RemoteConfigService {
     try {
       await remoteConfig.setConfigSettings(
         RemoteConfigSettings(
-          fetchTimeout: const Duration(seconds: 7),
+          fetchTimeout: const Duration(seconds: 3),
           minimumFetchInterval: const Duration(
             seconds: 10,
           ),
@@ -42,6 +42,12 @@ class RemoteConfigService {
 
   Future<void> _fetchConfig() async {
     try {
+      await remoteConfig.setDefaults({
+        'force_update': false,
+        'android_version': '1.0.0',
+        'ios_version': '1.0.0',
+        'user_ad_interval': 3,
+      });
       await remoteConfig.fetchAndActivate();
     } catch (e) {
       rethrow;

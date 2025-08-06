@@ -21,6 +21,10 @@ class StoreBinding implements Bindings {
       ..lazyPut<CacheClient>(() => cacheClient)
       ..lazyPut<AppController>(
         AppController.new,
-      );
+      )
+      ..lazyPut<FeedbackController>(FeedbackController.new)
+      ..lazyPut<InterstitialController>(InterstitialController.new)
+      ..lazyPut<RewardedAdController>(RewardedAdController.new)
+      ..lazyPut<SplashController>(SplashController.new);
   }
 }

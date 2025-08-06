@@ -15,15 +15,19 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);
   };
-  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-  // await RemoteConfigService().initConfig();
+  await RemoteConfigService().initConfig();
   await HiveCacheClient.initializeCache();
   await LocalStorageDb.init();
+  await  initPlatformState();
+  if (!kDebugMode) {
+    FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+  }
   PaintingBinding.instance.imageCache.maximumSizeBytes = 1000 << 20;
   runApp(await builder());
 }

@@ -3,4 +3,5 @@ class AppStrings {
   static const String tC = "";
   static const String packageNameAndroid = "";
   static const String appIdIos = "";
+  static const String appName = "";
 }

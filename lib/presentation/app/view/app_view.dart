@@ -1,9 +1,8 @@
-
 import 'package:flutter/material.dart';
- import 'package:get/get.dart';
+import 'package:get/get.dart';
 
 import '../../../domain/auth_repository/repository.dart';
- import '../../../utils/extensions/sized_box_extension.dart';
+import '../../../utils/extensions/sized_box_extension.dart';
 import '../../../utils/utils_export.dart';
 
 class App extends StatefulWidget {
@@ -40,8 +39,7 @@ class _AppState extends State<App> {
           title: 'Flutter BoilerPlate',
           debugShowCheckedModeBanner: false,
           theme: lightTheme(),
-          darkTheme: darkTheme(),
-           initialBinding: StoreBinding(
+          initialBinding: StoreBinding(
             authRepository: authRepo,
             cacheClient: cacheClient,
           ),
